@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+body {
+    min-height: 100vh;
+    background: #ffe6e6; /* Soft light background */
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1.title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search-bar {
+    width: 450px;
+    height: 40px;
+    border: 2px solid #ff6666; /* Matching color */
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar:focus {
+    border-color: #ff4d4d; /* Darker shade on focus */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-button {
+    background: #ff6666; /* Matching color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.3s;
+}
+
+.search-button:hover {
+    background: #ff4d4d; /* Darker shade on hover */
+}
+
+.recipe {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between recipe cards */
+    padding: 0 20px; /* Padding around recipe section */
+}
+
+.recipe-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Round the corners */
+    transition: transform 0.3s;
+    width: 400px; /* Fixed width for uniformity */
+    min-height: 500px;
+}
+
+.recipe-container:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.list li {
+    margin: 5px 17px; /* Spacing between ingredients */
+}
+
+.photo {
+    border-radius: 15px; /* Match card style */
+    height: 200px; /* Adjusted height */
+    width: 300px /* Full width */;
+    margin-left:20px;
+   
+}
+
+.title {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #333;
+    margin: 10px 0;
 }
